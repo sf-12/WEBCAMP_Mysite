@@ -8,6 +8,7 @@
 /* --------- header --------- */
 header {
   background-color: #ec715f;
+  height: 70px;
 }
 
 header a {
@@ -17,7 +18,6 @@ header a {
 
 .container {
   width: 1024px;
-  height: 70px;
   margin: 0 auto;
 }
 
@@ -158,12 +158,10 @@ header a {
 }
 
 /* Feature */
-.feature {
-  width: 980px;
-  margin: 0 auto 90px auto;
-}
 
 .strengths {
+  width: 980px;
+  margin: 0 auto 90px auto;
   display: flex;
   font-size: 60px;
 }
@@ -304,5 +302,180 @@ footer {
   text-align: center;
   font-size: 16px;
   line-height: 60px;
-  color: #FAFAFA;
+  color: #fafafa;
+}
+
+/* タブレット縦置きサイズ（768px）以下の際に適用される設定 */
+@media screen and (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+  /* --------- header --------- */
+
+  header {
+    height: 50px;
+  }
+
+  .nav-ul {
+    display: none;
+  }
+
+  .logo {
+    height: 50px;
+  }
+
+  .menu-box {
+    float: right;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #fafafa;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 5%;
+  }
+
+  .list-bar:first-child {
+    margin-top: 10px;
+  }
+
+  .list-bar {
+    display: block;
+    margin: 5px auto;
+    width: 25px;
+    height: 2px;
+    background-color: #fafafa;
+  }
+
+  /* ---------- main ---------- */
+
+  /* メインビジュアル  */
+  .main-visual {
+    background-image: url(img/code.png);
+  }
+
+  .mv-title {
+    font-size: 40px;
+  }
+
+  .mv-subtitle {
+    font-size: 18px;
+  }
+
+  /* Portfolio */
+
+  .portfolio {
+    padding: 0 5%;
+    padding-bottom: 90px;
+  }
+
+  .picts {
+    display: inline;
+  }
+
+  .sp-none {
+    display: none;
+  }
+
+  .pict:nth-child(2) {
+    margin: 0 auto;
+  }
+
+  .pict:nth-child(4) {
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .pict:nth-child(6) {
+    margin: 0 auto;
+  }
+
+  /* Feature */
+  .feature {
+    padding: 0 5%;
+    padding-bottom: 90px;
+  }
+
+  .strengths {
+    display: inline;
+  }
+
+  .strength {
+    margin: 0 auto;
+  }
+  .st2 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  /* Profile */
+  .profile {
+    padding: 0 5%;
+  }
+
+  .profile-contents {
+    display: inline;
+  }
+
+  .left-content {
+    margin: 0 auto;
+  }
+
+  .right-content {
+    width: auto;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 90px;
+  }
+
+  .myname-title {
+    padding-top: 20px;
+  }
+
+  /* Contact */
+  .contact {
+    padding: 0 5%;
+  }
+
+  .contact-text {
+    padding-bottom: 50px;
+  }
+
+  .contact-contents {
+    display: inline;
+  }
+
+  .contact-contents-left {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .contact-contents-right {
+    margin: 0 auto;
+    padding-bottom: 90px;
+  }
+
+  .mail,
+  .tel,
+  .sns {
+    text-align: center;
+  }
+
+  .tel {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .mail-text {
+    padding-bottom: 0;
+  }
+
+  .contact .fa:nth-child(2) {
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+
+  .sns-icon {
+    display: inline;
+  }
+
 }
