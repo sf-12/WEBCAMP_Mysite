@@ -5,6 +5,13 @@
   box-sizing: border-box;
 }
 
+/* 全般 */
+a {
+  text-decoration: none;
+  color: #fafafa;
+}
+
+/* --------- header --------- */
 header {
   background-color: #ec715f;
 }
@@ -32,11 +39,50 @@ header {
   line-height: 70px;
 }
 
-a {
-  text-decoration: none;
-  color: #fafafa;
+/* ---------- main ---------- */
+
+/* 共通 */
+.portfolio,
+.profile {
+  background-color: #eceff1;
 }
 
+.portfolio,
+.feature,
+.profile,
+.contact {
+  text-align: center;
+  color: #000;
+}
+
+.portfolio-title,
+.feature-title,
+.profile-title,
+.contact-title {
+  padding-top: 90px;
+  font-size: 32px;
+}
+
+.portfolio-title::after,
+.feature-title::after,
+.profile-title::after,
+.contact-title::after {
+  content: "";
+  display: block;
+  margin: 8px auto 0 auto;
+  height: 3px;
+  width: 70px;
+  background-color: #ec715f;
+}
+
+.portfolio-text,
+.feature-text,
+.profile-text {
+  font-size: 16px;
+  padding: 30px 0;
+}
+
+/* メインビジュアル  */
 .main-visual {
   background-image: url(img/mv.png);
   background-repeat: no-repeat;
@@ -57,42 +103,7 @@ a {
   padding-top: 10px;
 }
 
-.portfolio {
-  background-color: #eceff1;
-}
-
-.feature {
-  width: 980px;
-  margin: 0 auto;
-}
-
-.portfolio,
-.feature {
-  text-align: center;
-  color: #000;
-}
-
-.portfolio-title,
-.feature-title {
-  padding-top: 90px;
-  font-size: 32px;
-}
-
-.portfolio-title::after,
-.feature-title::after {
-  content: "";
-  display: block;
-  margin: 8px auto 0 auto;
-  height: 3px;
-  width: 70px;
-  background-color: #ec715f;
-}
-
-.portfolio-text,
-.feature-text {
-  font-size: 16px;
-  padding: 30px 0;
-}
+/* Portfolio */
 
 .picts {
   display: flex;
@@ -110,35 +121,45 @@ a {
   background-position: center;
 }
 
-.pic1 {
+.pict:nth-child(-n + 3) {
+  /* 3番目まで */
+  margin-bottom: 10px;
+}
+
+.pict:nth-child(3n-1) {
+  /* ２番と５番 */
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.pict:nth-child(1) {
   background-image: url(img/sketch.jpg);
-  margin-right: 10px;
-  margin-bottom: 10px;
 }
 
-.pic2 {
+.pict:nth-child(2) {
   background-image: url(img/webcamp.png);
-  margin-right: 10px;
-  margin-bottom: 10px;
 }
 
-.pic3 {
+.pict:nth-child(3) {
   background-image: url(img/write.jpg);
-  margin-bottom: 10px;
 }
 
-.pic4 {
+.pict:nth-child(4) {
   background-image: url(img/websuku.png);
-  margin-right: 10px;
 }
 
-.pic5 {
+.pict:nth-child(5) {
   background-image: url(img/talk.jpg);
-  margin-right: 10px;
 }
 
-.pic6 {
+.pict:nth-child(6) {
   background-image: url(img/webcamp-mother.png);
+}
+
+/* Feature */
+.feature {
+  width: 980px;
+  margin: 0 auto 90px auto;
 }
 
 .strengths {
@@ -163,3 +184,53 @@ a {
   margin-left: 10px;
   margin-right: 10px;
 }
+
+/* Profile */
+.profile {
+  margin: 0 auto;
+  padding-bottom: 90px;
+}
+
+.profile-contents {
+  margin: 0 auto;
+  display: flex;
+  width: 1024px;
+}
+
+.left-content {
+  width: 512px;
+}
+
+.my-icon {
+  border-radius: 50%;
+  width: 250px;
+  height: 250px;
+}
+
+.right-content {
+  width: 512px;
+  text-align: left;
+}
+
+.myname-title {
+  font-size: 20px;
+  padding-bottom: 5px;
+}
+
+.myname-text {
+  font-size: 16px;
+  padding-bottom: 20px;
+}
+
+.skills-title {
+  font-size: 20px;
+  padding-bottom: 5px;
+}
+
+.skills-text {
+  font-size: 16px;
+}
+
+/* Contact */
+
+/* --------- footer --------- */
